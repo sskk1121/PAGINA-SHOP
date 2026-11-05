@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de envío</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: beige;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .formulario {
+            background: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 7px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 25px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #777;
+        }
+
+        .volver {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .volver:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>INFORMACION DE ENVIO</h1>
+
+    <div class="formulario">
+
+        <form action="#" method="post">
+
+            <h2>Datos personales</h2>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"
+            placeholder="Introduce tu nombre" required>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos"
+            placeholder="Introduce tus apellidos" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email"
+            placeholder="ejemplo@gmail.com" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono"
+            placeholder="Introduce tu teléfono" required>
+
+            <h2 style="margin-top: 30px;">Dirección de envío</h2>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion"
+            placeholder="Calle y número" required>
+
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad"
+            placeholder="Introduce tu ciudad" required>
+
+            <label for="codigo">Código postal:</label>
+            <input type="text" id="codigo" name="codigo"
+            placeholder="Código postal" required>
+
+            <label for="pais">País:</label>
+            <select id="pais" name="pais" required>
+                <option value="">Selecciona tu país</option>
+                <option value="España">España</option>
+                <option value="Francia">Francia</option>
+                <option value="Italia">Italia</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Alemania">Alemania</option>
+            </select>
+
+            <h2 style="margin-top: 30px;">Método de envío</h2>
+
+            <label for="envio">Selecciona el envío:</label>
+            <select id="envio" name="envio" required>
+                <option value="">Selecciona una opción</option>
+                <option value="Estandar">Envío estándar (3-5 días) - Gratis</option>
+                <option value="Express">Envío express (24-48 horas) - 5€</option>
+            </select>
+
+            <label for="comentarios">Observaciones:</label>
+            <textarea id="comentarios" name="comentarios"
+            rows="4" placeholder="Información adicional sobre la entrega..."></textarea>
+
+            <button type="submit">CONFIRMAR ENVÍO</button>
+
+        </form>
+
+        <a href="productos.html" class="volver">
+            VOLVER A PRODUCTOS
+        </a>
+
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

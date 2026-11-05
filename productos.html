@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTOS DE LA TIENDA</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, sans-serif;
+            background: beige;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 100vh;
+            padding: 48px 20px;
+            gap: 30px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 36px;
+            text-align: center;
+        }
+
+        /* Contenedor del carrusel */
+        .carrete {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.5);
+        }
+
+        /* Tira de imágenes */
+        .pista {
+            display: flex;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .pista img {
+            flex: 0 0 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            user-select: none;
+        }
+
+        /* Botones anterior y siguiente */
+        .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,.45);
+            color: white;
+            border: none;
+            font-size: 28px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: rgba(0,0,0,.75);
+        }
+
+        .prev {
+            left: 12px;
+        }
+
+        .next {
+            right: 12px;
+        }
+
+        /* Puntos indicadores */
+        .puntos {
+            position: absolute;
+            bottom: 12px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .puntos button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(255,255,255,.5);
+            cursor: pointer;
+        }
+
+        .puntos button.activo {
+            background: white;
+        }
+
+        /* Botón para ir a otra página */
+        .boton-pagina {
+            display: inline-block;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .boton-pagina:hover {
+            background: #777;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1 class="especial">ALL PRODUCTS</h1>
+
+    <div class="carrete">
+
+        <div class="pista">
+
+
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.tmlJYQ4_93nNL2DKLpegJQHaLH%3Fr%3D0%26pid%3DApi&f=1&ipt=4be832d5ec9c54150c991889f78cf1d6136effb67d460246f27f1b83a93d3f90&ipo=images" alt="Producto 1">
+
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.qQAgYlHTseOOgjuD4OpkvAHaLH%3Fpid%3DApi&f=1&ipt=6753479d3d42ed5f7c4b4f8c0692a942dc8260036bc748ab3eeb3150fe0db3aa&ipo=images" alt="Producto 2">
+
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F0a%2F48%2F21%2F0a48217369046b37a1d283fd1a19e54b.jpg&f=1&nofb=1&ipt=02292eb7cbf14a3acc4a09420f8c29b92fa4b2ed064b7b37a00d9f5f7d515a2e&ipo=images" alt="Producto 3">
+
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F736x%2F2a%2F2e%2F01%2F2a2e015a6c5c20dc35f5a8c3082b20ed.jpg&f=1&nofb=1&ipt=fa37955b33c3763af88355cd73b8b63eabae38fd6e0d7de2e0b5d7f11326f4c4&ipo=images" alt="Producto 4">
+
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F736x%2F62%2Fd2%2Fea%2F62d2eae7bc8689501962ccf622efa272.jpg&f=1&nofb=1&ipt=a4c04d0b51482015219560b1585e6492db031f590a761710af191bfc3f3eb60d&ipo=images" alt="Producto 5">
+
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.lVKCznp_0-HbqjEajCncNAHaHa%3Fpid%3DApi&f=1&ipt=0de006d258c4dfa7cd6af2e61d68915b299af616b7c5caa505af0ac37b198a68&ipo=images" alt="Producto 6">
+
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.dSdmWRQ1kEQDRpPhrBZV1QHaHa%3Fpid%3DApi&f=1&ipt=d7e575e6951b97cbf62eb78b14d16ce0c630465c8e5ada64fcdf8f2ba2ce37f7&ipo=images" alt="Producto 7">
+
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.KdrFsi_ORYWGepNqSO_djQHaEp%3Fr%3D0%26pid%3DApi&f=1&ipt=36ade6231d2ea41cf93f94d253235ce968e31e8ad749b30d19e7d3ee3795edca9&ipo=images" alt="Producto 8">
+
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.stL57a9q3ri7MqiGh6GOnQHaKe%3Fr%3D0%26pid%3DApi&f=1&ipt=048a5d7f2c2c9bfa14c9a7aaff1f2ce1980f1c7c1d2c40d4ef2d68d36101d7fb&ipo=images" alt="Producto 9">
+
+        </div>
+
+        <button class="btn prev" aria-label="Anterior">&#10094;</button>
+        <button class="btn next" aria-label="Siguiente">&#10095;</button>
+
+        <div class="puntos"></div>
+
+    </div>
+
+    <a href="envio.html" class="boton-pagina">
+        CONSULTAR ENVIO
+    </a>
+
+    <script>
+
+        const pista = document.querySelector('.pista');
+        const fotos = pista.querySelectorAll('img');
+        const puntos = document.querySelector('.puntos');
+
+        let actual = 0;
+        let timer;
+
+        // Crear un punto por cada imagen
+        fotos.forEach((_, i) => {
+            const p = document.createElement('button');
+            p.type = 'button';
+            p.setAttribute('aria-label', 'Ir a imagen ' + (i + 1));
+            p.addEventListener('click', () => irA(i));
+            puntos.appendChild(p);
+        });
+
+        // Cambiar de imagen
+        function irA(i) {
+
+            actual = (i + fotos.length) % fotos.length;
+
+            pista.style.transform = `translateX(-${actual * 100}%)`;
+
+            puntos.querySelectorAll('button').forEach((p, j) => {
+                p.classList.toggle('activo', j === actual);
+            });
+
+            reiniciarAuto();
+        }
+
+        // Botón anterior
+        document.querySelector('.prev').onclick = () => {
+            irA(actual - 1);
+        };
+
+        // Botón siguiente
+        document.querySelector('.next').onclick = () => {
+            irA(actual + 1);
+        };
+
+        // Flechas del teclado
+        document.addEventListener('keydown', e => {
+
+            if (e.key === 'ArrowLeft') {
+                irA(actual - 1);
+            }
+
+            if (e.key === 'ArrowRight') {
+                irA(actual + 1);
+            }
+
+        });
+
+        // Deslizar con el dedo en móvil
+        let inicioX = 0;
+
+        pista.addEventListener('touchstart', e => {
+            inicioX = e.touches[0].clientX;
+        });
+
+        pista.addEventListener('touchend', e => {
+
+            const dx = e.changedTouches[0].clientX - inicioX;
+
+            if (Math.abs(dx) > 50) {
+                irA(actual + (dx < 0 ? 1 : -1));
+            }
+
+        });
+
+        // Avance automático cada 4 segundos
+        function reiniciarAuto() {
+
+            clearInterval(timer);
+
+            timer = setInterval(() => {
+                irA(actual + 1);
+            }, 4000);
+
+        }
+
+        // Iniciar carrusel
+        irA(0);
+
+    </script>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

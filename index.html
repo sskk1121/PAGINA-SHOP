@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <title>Tienda de Ropa</title>
+</head>
+<body>
+
+<h1>Bienvenido a PabloShop</h1>
+
+<h3>En PabloShop, nos preocupamos mas por el cliente que por el producto, por ellos nos posicionamos en el TOP #1🏆</h3>
+
+<dialog id="miDialogo">
+<h3>POLITICAS PRIVACIDAD</h3>
+<p>En nuestra tienda de ropa, nos comprometemos a proteger la privacidad de nuestros clientes. Los datos personales proporcionados, como el nombre, el correo electrónico y la dirección de envío, se utilizarán únicamente para gestionar pedidos, pagos y consultas. No venderemos los datos a terceros y los compartiremos solo cuando sea necesario para prestar nuestros servicios o cumplir obligaciones legales. Los usuarios podrán solicitar el acceso, la modificación o la eliminación de sus datos contactando con nosotros a través de nuestro correo electrónico.</p>
+<button id="cerrarDialogo">Cerrar</button>
+</dialog>
+<button id="abrirDialogo">Consultar Politicas
+</button>
+<script>
+const dialogo = document.getElementById('miDialogo');
+document.getElementById('abrirDialogo').addEventListener('click', () => {
+dialogo.showModal();
+});
+document.getElementById('cerrarDialogo').addEventListener('click', () => {
+dialogo.close();
+});
+// Cerrar al hacer clic en el fondo oscuro
+dialogo.addEventListener('click', (e) => {
+if (e.target === dialogo) dialogo.close();
+});
+</script>
+
+<div style="display: flex; align-items: center; gap: 20px;">
+
+    <div>
+        <h3>📦 Envíos en 24/48h</h3>
+        <h3>🛠️ Envíos Internacionales</h3>
+        <h3>✅ Asistencia las 24h del día</h3>
+
+        <button onclick="window.location.href='horarios.html'">
+            CONSULTA LOS HORARIOS ‼️
+        </button>
+    </div>
+
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.8juLY_---ie8IluxWIh2GAHaEK%3Fr%3D0%26pid%3DApi&f=1&ipt=d7a07c838ab5bbd69a315c235190cea2c36209b519444959a900e56731108652&ipo=images"
+         alt="Mi imagen"
+         width="380">
+</div>
+<br>
+
+<h1>PRODUCTOS DESTACADOS</h1>
+
+
+  <div class="carrete">
+    <div class="pista">
+      <!-- Cambia estas URLs por tus propias fotos -->
+      <div style="text-align: center;">
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.qQAgYlHTseOOgjuD4OpkvAHaLH%3Fpid%3DApi&f=1&ipt=6753479d3d42ed5f7c4b4f8c0692a942dc8260036bc748ab3eeb3150fe0db3aa&ipo=images" alt="Foto 1"; width="400"> </div>
+      <h4> PRECIO -> 29,99$</h4>
+      <h5>TALLAS DISPONIBLES -> XS, S, XL</h5>
+
+      <div style="text-align: center;">
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.tmlJYQ4_93nNL2DKLpegJQHaLH%3Fr%3D0%26pid%3DApi&f=1&ipt=4be832d5ec9c54150c991889f78cf1d6136effb67d460246f27f1b83a93d3f90&ipo=images" alt="Foto 2"; width="400"> </div>
+ <h4> PRECIO -> 39,99$</h4>
+      <h5>TALLAS DISPONIBLES -> XS, S, XL</h5>
+
+      <div style="text-align: center;">
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F0a%2F48%2F21%2F0a48217369046b37a1d283fd1a19e54b.jpg&f=1&nofb=1&ipt=02292eb7cbf14a3acc4a09420f8c29b92fa4b2ed064b7b37a00d9f5f7d515a2e&ipo=images" alt="Foto 3"; width="400"> </div>
+ <h4> PRECIO -> 29,99$</h4>
+      <h5>TALLAS DISPONIBLES -> XS, S, XL</h5>
+
+      <div style="text-align: center;">
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F736x%2F2a%2F2e%2F01%2F2a2e015a6c5c20dc35f5a8c3082b20ed.jpg&f=1&nofb=1&ipt=fa37955b33c3763af88355cd73b8b63eabae38fd6e0d7de2e0b5d7f11326f4c4&ipo=images" alt="Foto 4"; width="400"> </div>
+<h4> PRECIO -> 29,99$</h4>
+      <h5>TALLAS DISPONIBLES -> XS, S, XL</h5>
+
+
+      <div style="text-align: center;">
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F736x%2F62%2Fd2%2Fea%2F62d2eae7bc8689501962ccf622efa272.jpg&f=1&nofb=1&ipt=a4c04d0b51482015219560b1585e6492db031f590a761710af191bfc3f3eb60d&ipo=images" alt="Foto 5"; width="400"> </div>
+        <h4> PRECIO -> 49,99$</h4>
+      <h5>TALLAS DISPONIBLES -> XS, S, XL</h5>
+
+    </div>
+
+<div style="text-align: center;" style="font-size: 20px; padding: 15px 30px;">
+
+    <button onclick="window.location.href='pagina2.html'">
+        TODOS LOS PRODUCTOS
+    </button>
+</div>
+
+
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
+
